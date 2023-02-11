@@ -8,6 +8,8 @@ composer require --dev phpyh/coding-standard
 
 ## Usage with PHP CS Fixer
 
+Update your `.php-cs-fixer.dist.php`:
+
 ```php
 <?php
 
