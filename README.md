@@ -1,4 +1,4 @@
-# Phpyh Coding Standard For PHP CS Fixer
+# Phpyh Coding Standard
 
 ## Installation
 
@@ -6,7 +6,7 @@
 composer require --dev phpyh/coding-standard
 ```
 
-## Usage
+## Usage with PHP CS Fixer
 
 ```php
 <?php
