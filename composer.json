@@ -1,0 +1,35 @@
+{
+    "name": "phpyh/coding-standard",
+    "description": "Phpyh Coding Standard For PHP CS Fixer",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Phpyh\\CodingStandard\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Valentin Udaltsov",
+            "email": "udaltsov.valentin@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "friendsofphp/php-cs-fixer": "^3.14.3"
+    },
+    "require-dev": {
+        "vimeo/psalm": "^5.6"
+    },
+    "scripts": {
+        "cleanup": "rm -rf ./var/",
+        "fixcs": "PHP_CS_FIXER_IGNORE_ENV=1 vendor/bin/php-cs-fixer fix -v",
+        "psalm": [
+            "mkdir -p var",
+            "vendor/bin/psalm --show-info"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

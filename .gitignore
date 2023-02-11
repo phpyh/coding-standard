@@ -1,0 +1,5 @@
+/var/
+/vendor/
+/.php-cs-fixer.php
+/composer.lock
+/psalm.xml
