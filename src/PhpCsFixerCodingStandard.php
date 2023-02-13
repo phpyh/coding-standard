@@ -34,11 +34,9 @@ final class PhpCsFixerCodingStandard
                     'allow_single_line_anonymous_class_with_empty_body' => true,
                     'allow_single_line_closure' => true,
                 ],
-                'comment_to_phpdoc' => ['ignored_tags' => ['fixme']],
                 'date_time_immutable' => true,
                 'final_class' => true,
                 'final_public_method_for_abstract_class' => true,
-                'fopen_flags' => ['b_mode' => true],
                 'global_namespace_import' => [
                     'import_constants' => false,
                     'import_functions' => false,
