@@ -1,4 +1,4 @@
-# Phpyh Coding Standard
+# PHPyh Coding Standard
 
 ## Installation
 
@@ -13,7 +13,7 @@ Update your `.php-cs-fixer.dist.php`:
 ```php
 <?php
 
-use Phpyh\CodingStandard\PhpCsFixerCodingStandard;
+use PHPyh\CodingStandard\PhpCsFixerCodingStandard;
 
 $finder = PhpCsFixer\Finder::create()
     ->in(__DIR__.'/src')

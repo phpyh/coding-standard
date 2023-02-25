@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Phpyh\CodingStandard\PhpCsFixerCodingStandard;
+use PHPyh\CodingStandard\PhpCsFixerCodingStandard;
 
 $finder = PhpCsFixer\Finder::create()
     ->in([

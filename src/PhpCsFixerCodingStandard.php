@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phpyh\CodingStandard;
+namespace PHPyh\CodingStandard;
 
 use PhpCsFixer\ConfigInterface;
 

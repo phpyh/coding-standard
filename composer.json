@@ -1,11 +1,11 @@
 {
     "name": "phpyh/coding-standard",
-    "description": "Phpyh Coding Standard For PHP CS Fixer",
+    "description": "PHPyh Coding Standard For PHP CS Fixer",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Phpyh\\CodingStandard\\": "src/"
+            "PHPyh\\CodingStandard\\": "src/"
         }
     },
     "authors": [
