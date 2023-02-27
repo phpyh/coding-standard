@@ -27,5 +27,10 @@ $config = (new PhpCsFixer\Config())
 
 (new PhpCsFixerCodingStandard())->applyTo($config);
 
+// you can further customize rules if you need to
+$config->setRules([
+    // my custom rules
+] + $config->getRules());
+
 return $config;
 ```
