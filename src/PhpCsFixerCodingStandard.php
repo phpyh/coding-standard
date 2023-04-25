@@ -30,10 +30,6 @@ final class PhpCsFixerCodingStandard
                     'while',
                 ]],
                 'blank_line_between_import_groups' => false,
-                'braces' => [
-                    'allow_single_line_anonymous_class_with_empty_body' => true,
-                    'allow_single_line_closure' => true,
-                ],
                 'date_time_immutable' => true,
                 'final_class' => true,
                 'final_public_method_for_abstract_class' => true,
