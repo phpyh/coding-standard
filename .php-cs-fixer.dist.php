@@ -6,7 +6,7 @@ use PHPyh\CodingStandard\PhpCsFixerCodingStandard;
 
 $finder = PhpCsFixer\Finder::create()
     ->in([
-        __DIR__.'/src',
+        __DIR__ . '/src',
     ])
     ->append([
         __FILE__,
@@ -15,7 +15,7 @@ $finder = PhpCsFixer\Finder::create()
 
 $config = (new PhpCsFixer\Config())
     ->setFinder($finder)
-    ->setCacheFile(__DIR__.'/var/.php-cs-fixer.cache')
+    ->setCacheFile(__DIR__ . '/var/.php-cs-fixer.cache')
 ;
 
 (new PhpCsFixerCodingStandard())->applyTo($config);

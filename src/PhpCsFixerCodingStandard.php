@@ -30,6 +30,7 @@ final class PhpCsFixerCodingStandard
                     'while',
                 ]],
                 'blank_line_between_import_groups' => false,
+                'concat_space' => ['spacing' => 'one'],
                 'date_time_immutable' => true,
                 'final_class' => true,
                 'final_public_method_for_abstract_class' => true,
