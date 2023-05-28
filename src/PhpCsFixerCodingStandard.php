@@ -8,7 +8,10 @@ use PhpCsFixer\ConfigInterface;
 
 final class PhpCsFixerCodingStandard
 {
-    public function applyTo(ConfigInterface $config): void
+    /**
+     * @param array<string, array<string, mixed>|bool> $overridingRules
+     */
+    public function applyTo(ConfigInterface $config, array $overridingRules = []): void
     {
         $config
             ->setRiskyAllowed(true)
@@ -84,6 +87,7 @@ final class PhpCsFixerCodingStandard
                 'single_line_comment_style' => ['comment_types' => ['hash']],
                 'trailing_comma_in_multiline' => ['after_heredoc' => true, 'elements' => ['arrays', 'arguments', 'parameters']],
                 'yoda_style' => ['equal' => false, 'identical' => false, 'less_and_greater' => false],
+                ...$overridingRules,
             ]);
     }
 }
