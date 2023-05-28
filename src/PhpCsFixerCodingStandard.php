@@ -40,6 +40,7 @@ final class PhpCsFixerCodingStandard
                     'import_classes' => false,
                 ],
                 'method_chaining_indentation' => false,
+                'multiline_whitespace_before_semicolons' => ['strategy' => 'no_multi_line'],
                 'no_break_comment' => false,
                 'no_superfluous_phpdoc_tags' => ['remove_inheritdoc' => true],
                 'no_trailing_whitespace_in_string' => false,
@@ -83,7 +84,6 @@ final class PhpCsFixerCodingStandard
                 'single_line_comment_style' => ['comment_types' => ['hash']],
                 'trailing_comma_in_multiline' => ['after_heredoc' => true, 'elements' => ['arrays', 'arguments', 'parameters']],
                 'yoda_style' => ['equal' => false, 'identical' => false, 'less_and_greater' => false],
-            ])
-        ;
+            ]);
     }
 }
