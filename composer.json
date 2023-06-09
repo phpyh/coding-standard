@@ -2,6 +2,12 @@
     "name": "phpyh/coding-standard",
     "description": "PHPyh Coding Standard For PHP CS Fixer",
     "type": "library",
+    "keywords": [
+        "fixer",
+        "standards",
+        "static analysis",
+        "static code analysis"
+    ],
     "license": "MIT",
     "autoload": {
         "psr-4": {
