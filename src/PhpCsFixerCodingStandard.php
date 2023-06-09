@@ -33,6 +33,15 @@ final class PhpCsFixerCodingStandard
                     'while',
                 ]],
                 'blank_line_between_import_groups' => false,
+                'class_attributes_separation' => [
+                    'elements' => [
+                        'const' => 'none',
+                        'method' => 'one',
+                        'property' => 'one',
+                        'trait_import' => 'none',
+                        'case' => 'none',
+                    ],
+                ],
                 'concat_space' => ['spacing' => 'one'],
                 'date_time_immutable' => true,
                 'final_class' => true,
