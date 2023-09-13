@@ -95,6 +95,7 @@ final class PhpCsFixerCodingStandard
                 'phpdoc_types_order' => false,
                 'return_assignment' => false,
                 'single_line_comment_style' => ['comment_types' => ['hash']],
+                'static_lambda' => true,
                 'trailing_comma_in_multiline' => ['after_heredoc' => true, 'elements' => ['arrays', 'arguments', 'parameters']],
                 'yoda_style' => ['equal' => false, 'identical' => false, 'less_and_greater' => false],
                 ...$overridingRules,
