@@ -1,6 +1,7 @@
 {
     "name": "phpyh/coding-standard",
     "description": "PHPyh Coding Standard For PHP CS Fixer",
+    "license": "MIT",
     "type": "library",
     "keywords": [
         "fixer",
@@ -8,12 +9,6 @@
         "static analysis",
         "static code analysis"
     ],
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "PHPyh\\CodingStandard\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "Valentin Udaltsov",
@@ -25,14 +20,29 @@
         "friendsofphp/php-cs-fixer": "^3.14.3"
     },
     "require-dev": {
-        "vimeo/psalm": "^5.6"
+        "ergebnis/composer-normalize": "^2.39",
+        "icanhazstring/composer-unused": "^0.8.10",
+        "maglnet/composer-require-checker": "^4.7.1",
+        "rector/rector": "^0.18.10",
+        "vimeo/psalm": "^5.15.0"
     },
-    "scripts": {
-        "cleanup": "find var ! -path var ! -path var/.gitignore -exec rm -rf {} +",
-        "fixcs": "PHP_CS_FIXER_IGNORE_ENV=1 vendor/bin/php-cs-fixer fix -v",
-        "psalm": "psalm --show-info"
+    "autoload": {
+        "psr-4": {
+            "PHPyh\\CodingStandard\\": "src/"
+        }
     },
     "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        },
         "sort-packages": true
+    },
+    "scripts": {
+        "check-require": "composer-require-checker check",
+        "check-unused": "composer-unused",
+        "fixcs": "php-cs-fixer fix --diff --verbose",
+        "pre-command-run": "mkdir -p var",
+        "psalm": "psalm --show-info=true --no-diff",
+        "rector": "rector process"
     }
 }

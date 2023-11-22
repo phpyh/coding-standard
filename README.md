@@ -1,5 +1,10 @@
 # PHPyh Coding Standard
 
+[![Latest Stable Version](https://poser.pugx.org/phpyh/coding-standard/v/stable.png)](https://packagist.org/packages/phpyh/coding-standard)
+[![Total Downloads](https://poser.pugx.org/phpyh/coding-standard/downloads.png)](https://packagist.org/packages/phpyh/coding-standard)
+[![psalm-level](https://shepherd.dev/github/phpyh/coding-standard/level.svg)](https://shepherd.dev/github/phpyh/coding-standard)
+[![type-coverage](https://shepherd.dev/github/phpyh/coding-standard/coverage.svg)](https://shepherd.dev/github/phpyh/coding-standard)
+
 ## Installation
 
 ```shell
