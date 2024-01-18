@@ -84,6 +84,7 @@ final class PhpCsFixerCodingStandard
                     'method_private',
                 ]],
                 'ordered_imports' => ['imports_order' => ['class', 'function', 'const']],
+                'ordered_types' => ['sort_algorithm' => 'none'],
                 'php_unit_internal_class' => false,
                 'php_unit_strict' => false,
                 'php_unit_test_case_static_method_calls' => ['call_type' => 'self'],
