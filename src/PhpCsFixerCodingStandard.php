@@ -17,12 +17,12 @@ final class PhpCsFixerCodingStandard
             ->setRiskyAllowed(true)
             ->setRules([
                 '@PHP80Migration:risky' => true,
-                '@PHP81Migration' => true,
+                '@PHP83Migration' => true,
                 '@PhpCsFixer' => true,
                 '@PhpCsFixer:risky' => true,
                 '@PHPUnit84Migration:risky' => true,
-                '@PSR12' => true,
-                '@PSR12:risky' => true,
+                '@PER-CS2.0' => true,
+                '@PER-CS2.0:risky' => true,
                 'blank_line_before_statement' => ['statements' => [
                     'continue',
                     'declare',
