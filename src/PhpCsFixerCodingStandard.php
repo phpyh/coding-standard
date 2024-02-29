@@ -91,6 +91,11 @@ final class PhpCsFixerCodingStandard
                 'php_unit_test_class_requires_covers' => false,
                 'phpdoc_add_missing_param_annotation' => false,
                 'phpdoc_align' => false,
+                'phpdoc_no_alias_tag' => ['replacements' => [
+                    'property-write' => 'property',
+                    'type' => 'var',
+                    'link' => 'see',
+                ]],
                 'phpdoc_separation' => false,
                 'phpdoc_to_comment' => false,
                 'phpdoc_types_order' => false,
