@@ -35,11 +35,11 @@ final class PhpCsFixerCodingStandard
                 'blank_line_between_import_groups' => false,
                 'class_attributes_separation' => [
                     'elements' => [
-                        'const' => 'none',
+                        'case' => 'only_if_meta',
+                        'const' => 'only_if_meta',
                         'method' => 'one',
                         'property' => 'one',
-                        'trait_import' => 'none',
-                        'case' => 'none',
+                        'trait_import' => 'only_if_meta',
                     ],
                 ],
                 'concat_space' => ['spacing' => 'one'],
