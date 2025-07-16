@@ -6,6 +6,9 @@ namespace PHPyh\CodingStandard;
 
 use PhpCsFixer\ConfigInterface;
 
+/**
+ * @api
+ */
 final class PhpCsFixerCodingStandard
 {
     /**
@@ -16,8 +19,8 @@ final class PhpCsFixerCodingStandard
         $config
             ->setRiskyAllowed(true)
             ->setRules([
-                '@PHP80Migration:risky' => true,
-                '@PHP83Migration' => true,
+                '@PHP84Migration' => true,
+                '@PHP82Migration:risky' => true,
                 '@PhpCsFixer' => true,
                 '@PhpCsFixer:risky' => true,
                 '@PHPUnit84Migration:risky' => true,

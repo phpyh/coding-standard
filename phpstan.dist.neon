@@ -1,0 +1,8 @@
+parameters:
+    level: max
+    paths:
+        - src
+    checkBenevolentUnionTypes: true
+    editorUrl: ''
+    editorUrlTitle: '%%file%%:%%line%%'
+    tmpDir: ./var/phpstan

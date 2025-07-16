@@ -4,19 +4,19 @@ declare(strict_types=1);
 
 use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
+use PhpCsFixer\Runner\Parallel\ParallelConfigFactory;
 use PHPyh\CodingStandard\PhpCsFixerCodingStandard;
 
-$finder = Finder::create()
-    ->in([
-        __DIR__ . '/src',
-    ])
-    ->append([
-        __FILE__,
-    ]);
-
 $config = (new Config())
-    ->setFinder($finder)
-    ->setCacheFile(__DIR__ . '/var/.php-cs-fixer.cache');
+    ->setFinder(
+        Finder::create()
+            ->in(__DIR__ . '/src')
+            ->append([
+                __FILE__,
+            ]),
+    )
+    ->setParallelConfig(ParallelConfigFactory::detect())
+    ->setCacheFile(__DIR__ . '/var/' . basename(__FILE__) . '.cache');
 
 (new PhpCsFixerCodingStandard())->applyTo($config);
 

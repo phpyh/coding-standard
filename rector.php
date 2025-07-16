@@ -3,15 +3,17 @@
 declare(strict_types=1);
 
 use Rector\Config\RectorConfig;
-use Rector\Set\ValueObject\LevelSetList;
+use Rector\Php80\Rector\Class_\StringableForToStringRector;
+use Rector\Php83\Rector\ClassMethod\AddOverrideAttributeToOverriddenMethodsRector;
 
-return static function (RectorConfig $rectorConfig): void {
-    $rectorConfig->parallel();
-    $rectorConfig->cacheDirectory(__DIR__ . '/var/rector');
-    $rectorConfig->paths([
+return RectorConfig::configure()
+    ->withPaths([
         __DIR__ . '/src',
+    ])
+    ->withParallel()
+    ->withCache(__DIR__ . '/var/rector')
+    ->withPhpSets()
+    ->withSkip([
+        StringableForToStringRector::class,
+        AddOverrideAttributeToOverriddenMethodsRector::class,
     ]);
-    $rectorConfig->sets([
-        LevelSetList::UP_TO_PHP_81,
-    ]);
-};

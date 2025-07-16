@@ -1,66 +1,13 @@
-name: Check
-
 on:
+  workflow_dispatch: ~
   push:
     branches: ['main', '*.*.x']
   pull_request: ~
 
 jobs:
-  composer:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: shivammathur/setup-php@v2
-        with:
-          php-version: 8.1
-          tools: composer:v2
-          coverage: none
-      - uses: ramsey/composer-install@v3
-        with:
-          composer-options: --optimize-autoloader
-      - run: composer validate
-      - run: composer normalize --dry-run
-      - run: composer check-require
-      - run: composer check-unused
-
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: shivammathur/setup-php@v2
-        with:
-          php-version: 8.1
-          tools: composer:v2, cs2pr
-          coverage: none
-      - uses: ramsey/composer-install@v3
-        with:
-          composer-options: --optimize-autoloader
-      - run: composer fixcs -- --dry-run --diff --format=checkstyle --ansi | cs2pr
-
-  rector:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: shivammathur/setup-php@v2
-        with:
-          php-version: 8.1
-          tools: composer:v2
-          coverage: none
-      - uses: ramsey/composer-install@v3
-        with:
-          composer-options: --optimize-autoloader
-      - run: composer rector -- --dry-run
-
-  psalm:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: shivammathur/setup-php@v2
-        with:
-          php-version: 8.1
-          tools: composer:v2
-          coverage: none
-      - uses: ramsey/composer-install@v3
-        with:
-          composer-options: --optimize-autoloader
-      - run: composer psalm -- --stats --output-format=github --shepherd
+  check:
+    uses: thesis-php/.github/.github/workflows/check.yml@main
+    secrets: inherit
+    with:
+      psalm: true
+      rector: true

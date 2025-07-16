@@ -16,15 +16,11 @@
         }
     ],
     "require": {
-        "php": "^8.1",
-        "friendsofphp/php-cs-fixer": "^3.47.1"
+        "php": "^8.3",
+        "friendsofphp/php-cs-fixer": "^3.84.0"
     },
     "require-dev": {
-        "ergebnis/composer-normalize": "^2.43.0",
-        "icanhazstring/composer-unused": "^0.8.11",
-        "maglnet/composer-require-checker": "^4.7.1",
-        "rector/rector": "^1.2.4",
-        "vimeo/psalm": "^5.25.0"
+        "bamarni/composer-bin-plugin": "^1.8.2"
     },
     "autoload": {
         "psr-4": {
@@ -33,19 +29,30 @@
     },
     "config": {
         "allow-plugins": {
-            "ergebnis/composer-normalize": true
+            "bamarni/composer-bin-plugin": true
         },
+        "bump-after-update": "dev",
         "platform": {
-            "php": "8.1"
+            "php": "8.3.17"
         },
         "sort-packages": true
     },
+    "extra": {
+        "bamarni-bin": {
+            "bin-links": false,
+            "forward-command": true,
+            "target-directory": "tools"
+        }
+    },
     "scripts": {
-        "check-require": "composer-require-checker check",
-        "check-unused": "composer-unused",
-        "fixcs": "php-cs-fixer fix --diff --verbose",
+        "analyse-deps": "tools/composer-dependency-analyser/vendor/bin/composer-dependency-analyser",
+        "fixcs": "vendor/bin/php-cs-fixer fix --diff --verbose",
+        "infection": "tools/infection/vendor/bin/infection --show-mutations",
+        "normalize": "@composer bin composer-normalize normalize --diff ../../composer.json",
+        "phpstan": "tools/phpstan/vendor/bin/phpstan analyze",
         "pre-command-run": "mkdir -p var",
-        "psalm": "psalm --show-info=true --no-diff",
-        "rector": "rector process"
+        "psalm": "tools/psalm/vendor/bin/psalm --show-info --no-diff --no-cache",
+        "rector": "tools/rector/vendor/bin/rector process",
+        "test": "phpunit"
     }
 }
