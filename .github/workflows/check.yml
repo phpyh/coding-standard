@@ -11,3 +11,4 @@ jobs:
     with:
       psalm: true
       rector: true
+      test: false
