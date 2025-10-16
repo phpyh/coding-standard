@@ -19,13 +19,13 @@ final class PhpCsFixerCodingStandard
         $config
             ->setRiskyAllowed(true)
             ->setRules([
-                '@PHP84Migration' => true,
-                '@PHP82Migration:risky' => true,
+                '@PHP8x4Migration' => true,
+                '@PHP8x2Migration:risky' => true,
                 '@PhpCsFixer' => true,
                 '@PhpCsFixer:risky' => true,
-                '@PHPUnit84Migration:risky' => true,
-                '@PER-CS2.0' => true,
-                '@PER-CS2.0:risky' => true,
+                '@PHPUnit8x4Migration:risky' => true,
+                '@PER-CS2x0' => true,
+                '@PER-CS2x0:risky' => true,
                 'blank_line_before_statement' => ['statements' => [
                     'continue',
                     'declare',
