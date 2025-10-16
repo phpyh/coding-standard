@@ -81,7 +81,10 @@ final class PhpCsFixerCodingStandard
                 'return_assignment' => false,
                 'single_line_comment_style' => ['comment_types' => ['hash']],
                 'static_lambda' => true,
-                'trailing_comma_in_multiline' => ['after_heredoc' => true, 'elements' => ['arrays', 'arguments', 'parameters']],
+                'trailing_comma_in_multiline' => [
+                    'after_heredoc' => true,
+                    'elements' => ['arguments', 'array_destructuring', 'arrays', 'match', 'parameters'],
+                ],
                 'yoda_style' => ['equal' => false, 'identical' => false, 'less_and_greater' => false],
                 ...$overridingRules,
             ]);
